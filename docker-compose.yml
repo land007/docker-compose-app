@@ -2,6 +2,7 @@ version: "2.1"
 networks:
   internal_network:
 services:
+#docker rm -f watchtower; docker run -it --network none --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --interval 30 --label-enable
   watchtower:
     restart: unless-stopped
     image: containrrr/watchtower:latest
