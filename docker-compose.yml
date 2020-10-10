@@ -17,6 +17,7 @@ services:
     #ports:
     #  - "8080:8080"
     network_mode: none
+#docker rm -f n2n-edge; docker run -it --privileged --network host --restart=always --log-opt max-size=1m --log-opt max-file=1 --name n2n-edge -e "CONNECT=jiayiqiu.vicp.net:30151" --label=com.centurylinklabs.watchtower.enable=true -e "IP=192.168.11.11" -e "GROUP=openwrt" land007/n2n-edge:latest
   n2n-edge:
     restart: always
     network_mode: host
